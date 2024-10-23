@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# verify cesm
+echo "cesm"
+xmllint --noout --schema /blue/gerber/cdevaneprugh/models/cesm2.1.5/cime/config/xml_schemas/config_machines.xsd /blue/gerber/cdevaneprugh/models/config/cesm/config_machines.xml
+#xmllint --noout --schema /blue/gerber/cdevaneprugh/models/cesm2.1.5/cime/config/xml_schemas/config_batch.xsd /blue/gerber/cdevaneprugh/models/config/cesm/config_batch.xml
+xmllint --noout --schema /blue/gerber/cdevaneprugh/models/cesm2.1.5/cime/config/xml_schemas/config_compilers_v2.xsd /blue/gerber/cdevaneprugh/models/config/cesm/config_compilers.xml
+
+echo 
+
+# verify clm
+echo "clm"
+xmllint --noout --schema /blue/gerber/cdevaneprugh/models/clm5.0/cime/config/xml_schemas/config_machines.xsd /blue/gerber/cdevaneprugh/models/config/cesm/config_machines.xml
+#xmllint --noout --schema /blue/gerber/cdevaneprugh/models/clm5.0/cime/config/xml_schemas/config_batch.xsd /blue/gerber/cdevaneprugh/models/config/cesm/config_batch.xml
+xmllint --noout --schema /blue/gerber/cdevaneprugh/models/clm5.0/cime/config/xml_schemas/config_compilers_v2.xsd /blue/gerber/cdevaneprugh/models/config/cesm/config_compilers.xml
+
+echo
+
+# verify ctsm configs
+echo "ctsm"
+xmllint --noout --schema /blue/gerber/cdevaneprugh/models/ctsm/cime/CIME/data/config/xml_schemas/config_machines.xsd /blue/gerber/cdevaneprugh/models/config/ctsm/hipergator/config_machines.xml 
+xmllint --noout --schema /blue/gerber/cdevaneprugh/models/ctsm/cime/CIME/data/config/xml_schemas/config_batch.xsd /blue/gerber/cdevaneprugh/models/config/ctsm/config_batch.xml 

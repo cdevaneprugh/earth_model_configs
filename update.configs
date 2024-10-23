@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# update cesm configs
+cp cesm/config_compilers.xml cesm/config_machines.xml /blue/gerber/cdevaneprugh/models/cesm2.1.5/cime/config/cesm/machines
+
+# update clm configs
+cp cesm/config_compilers.xml cesm/config_machines.xml /blue/gerber/cdevaneprugh/models/clm5.0/cime/config/cesm/machines
+
+# update ctsm configs
+cp ctsm/config_batch.xml ctsm/config_machines.xml /blue/gerber/cdevaneprugh/models/ctsm/ccs_config/machines
+
+cp -r ctsm/hipergator /blue/gerber/cdevaneprugh/models/ctsm/ccs_config/machines
+
+cp ctsm/gnu_hipergator.cmake /blue/gerber/cdevaneprugh/models/ctsm/ccs_config/machines/cmake_macros
